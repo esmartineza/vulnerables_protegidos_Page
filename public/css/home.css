@@ -1,0 +1,184 @@
+.card-fondo {
+  border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.452); 
+  margin: 20px;
+}
+.card-header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+}
+.card-footer {
+  background-color: #3498db;
+  color: #fff;
+  padding: 30px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.texto-imagen {
+  margin-top: 20px;
+  text-align: right;
+  line-height: 1.25;
+
+}
+.texto-imagen-contenedor {
+  width: 880px;
+  height: 710px;
+  overflow: hidden;
+  margin-right: 20px; 
+  margin-left: 20px; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-top: -5px; 
+
+}
+.fecha-evento {
+  text-align: left;
+}
+
+.titulo-evento {
+  margin: 0; 
+  text-align: left; 
+}
+
+.direccion-evento {
+  text-align: right;
+}
+
+.direccion-titulo {
+  text-align: right;
+  margin-top: -20px;  
+}
+
+.direcciontext {
+  margin: 0;
+  text-align: right;
+}
+
+
+.button-asis {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.img-public {
+  float: left;
+  width: 502px;
+  height: 402px;
+  margin-right: 20px; 
+  margin-left: 20px; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-top: 120px; 
+}
+
+.card-body img {
+  max-width: 50%;
+  height: auto;
+}
+
+.texto-imagen {
+  margin-top: auto; 
+}
+
+
+
+.card-categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; 
+  color: #333; 
+}
+
+.card-categorias h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#contenedor-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tarjeta-categoria {
+  position: relative; 
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-categoria::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.tarjeta-categoria:hover::before {
+  opacity: 1; 
+}
+
+.categoria-letra {
+  color: black; 
+}
+
+.enero::before {
+  background-image: url('/img-categoria/blog-verano.jpg');
+}
+
+.febrero::before {
+  background-image: url('/img-categoria/blog-febrero.jpg');
+}
+.marzo::before {
+  background-image: url('/img-categoria/blog-marzo.jpg');
+}
+.abril::before {
+  background-image: url('/img-categoria/blog-abril.png');
+}
+.mayo::before {
+  background-image: url('/img-categoria/blog-mayo.jpg');
+}
+.junio::before {
+  background-image: url('/img-categoria/blog-junio.png');
+}
+.julio::before {
+  background-image: url('/img-categoria/blog-julio.jpg');
+}
+.agosto::before {
+  background-image: url('/img-categoria/blog-agosto.png');
+}
+.septiembre::before {
+  background-image: url('/img-categoria/blog-septiembre.jpg');
+}
+.octubre::before {
+  background-image: url('/img-categoria/blog-octubre.png');
+}
+.noviembre::before {
+  background-image: url('/img-categoria/blog-noviembre.png');
+}
+.diciembre::before {
+  background-image: url('/img-categoria/blog-diciembre.jpg');
+}
+

@@ -1,0 +1,30 @@
+<main class="contenedor-formularios">
+
+  <form class="default-form" action="/nuevo-post" method="POST" enctype="multipart/form-data">
+      <h1 class="titulos"><%- nombrePagina %></h1>
+      <div class="form-group">
+          <label for="titulo">Titulo de la Categoria</label>
+          <input class="input" type="text" name="nombrepost" id="titulo" placeholder="Titulo de la Categoria" required>
+      </div>
+      <div class="form-group descripcion">
+          <label for="descripcion">Descripción</label>
+          <div class="contenedor-editor">
+              <input type="hidden" id="x" name="descripcion">
+              <trix-editor input="x"></trix-editor>
+          </div>
+      </div>
+      <div>
+          <label class="contenedor-txt img">Imagen para la publicación</label>
+      </div>
+        <div class="file has-name">
+          <div class="file has-name">
+            <span class="file-cta">
+              <input type="file" name="imagen" required>
+            </span>
+        </div>
+        </div>
+      <div class="form-group enviar">
+          <input type="submit" class="custom-createcategoria btn-color-crecate" value="Crear Categoria">
+      </div>
+  </form>
+</main>

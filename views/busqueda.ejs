@@ -1,0 +1,51 @@
+<div class="container-inicio">
+    <div class="contenedor">
+        <h1 class="titulos">Buscar Publicaciones</h1>
+        <form action="/busqueda" method="GET">
+
+            <input type="text" name="titulo" placeholder="Titulo de la Publicacion">
+
+            <input type="submit" value="Buscar" class="btn-buscador">
+        </form>
+    </div>
+</div>
+<div class="publicaciones-container">
+    <h2 class="titulo"><%= nombrePagina %></h2>
+    <div class="publicaciones-grid">
+        <% if(publicaciones.length) { %>
+        <% publicaciones.forEach(publicacion => { %>
+
+        <div class="publicacion-card">
+            <div class="imagen">
+                <figure>
+                    <img src="/uploads/publicaciones/<%= publicacion.imagen %>" alt="Imagen de la publicación" />
+                </figure>
+            </div>
+            <div class="contenido">
+                <div class="media">
+                    <div class="media-contenido">
+                        <h4><b>Título: <%= publicacion.titulo %></b></h4>
+                    </div>
+                </div>
+                <div class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a href="https://www.instagram.com/laisla_opina/">@IslaDeMaipo</a>.
+                    <a href="http://www.islademaipo.cl/">#islademaipo</a> 
+                </div>
+                <% moment.locale('es') %>
+                <p class="fecha">Fecha Evento: <%= moment(publicacion.fecha).format('LL');  %></p>
+                <a href="/ver-publicacion/<%= publicacion.slug %>" class="ver-publicacion-btn">
+                    Ver Publicación
+                </a>
+            </div>
+        </div>
+        <% }) %>
+
+        <% } else { %>
+            <div class="container">
+              <h4 class="no-post-message">No se encontraron Publicaciones realizacionadas con la busqueda.</h4>
+           </div>
+           
+            <% } %>
+    </div>
+</div>

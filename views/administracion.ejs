@@ -1,0 +1,74 @@
+<main class="contenedor panel-administracion body1">
+  <div class="tarjeta ">
+    <h1 class="titulos">Panel Administrador</h1>
+    <div class="button-container">
+
+      <button class="custom-button btn-color-cate" onclick="redireccionar('/nuevo-post')">Nueva Cartegoria</button>
+      <button class="custom-button btn-color-public" onclick="redireccionar('/nueva-publicacion')">Nueva Publicacion</button>
+    </div>
+  </div>
+  <div class="carta-fondo">
+    <h2 class="titulo-carta">Publicaciones</h2>
+    <div class="card-container">
+      <% if(publicaciones.length) { %>
+        <% publicaciones.forEach(publicaciones => { %>
+                <div class="card">
+                    <div class="container">
+                      <p class="fecha">Fecha Creación: <%= moment(publicaciones.fecha).format('LL');  %></p>
+                      <h1 class="titulo-post"><%= publicaciones.titulo %></h1>
+                      <small></small>
+                      <p class="configuracion-asistencia"><%= publicaciones.asistencia.length %>  Confirmación de Asistencia</p>
+                    </div>
+                 
+                    <div class="button-edicion">
+                        <button class="custom-categorias btn-color-edit" onclick="redireccionar('/editar-publicacion/<%= publicaciones.id %>')">Editar</button>
+                        <button class="custom-categorias btn-color-ver" onclick="redireccionar('/asistencia-publicaciones/<%= publicaciones.id %>')">Asistencia</button>
+                        <button class="custom-categorias btn-color-eliminar" onclick="redireccionar('/eliminar-publicacion/<%= publicaciones.id %>')">Eliminar</button>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+        </div>
+          <div class="container">
+            <h4 class="no-post-message">No tienes Publicaciones Actualmente.</h4>
+         </div>         
+          <% } %>
+        </div> 
+</div>
+<div class="carta-fondo">
+  <h2 class="titulo-carta">Categorias</h2>
+  <div class="card-container">
+    <% if(post.length) { %>
+      <% post.forEach(post => { %>
+              <div class="card">
+                  <div class="container">
+                    <img class="card-image" src="/uploads/post/<%= post.imagen %>" alt="Avatar" >
+                    <p class="fecha">Fecha Creación: <%= moment(publicaciones.fecha).format('LL');  %></p>
+                    <h1 class="titulo-post"><b><%= post.nombrepost %></b></h1>
+                    <p class="descripc°ion-post">Descripción</p>
+                  </div>
+                  <div class="button-edicion">
+                    <button class="custom-categorias btn-color-edit" onclick="redireccionar('/editar-post/<%= post.id %>')">Editar</button>
+                    <button class="custom-categorias btn-color-public" onclick="crearNuevaPublicacion('<%= post.id %>')"> Nueva Publicación</button>
+                    <button class="custom-categorias btn-color-eliminar" onclick="redireccionar('/eliminar-post/<%= post.id %>')">Eliminar</button>
+                  </div>
+              </div>
+          <% }) %>
+      <% } else { %>
+      </div>
+        <div class="container">
+          <h4 class="no-post-message">No tienes Categorias Actualmente.</h4>
+       </div>         
+        <% } %>
+      </div> 
+</div>
+
+  <script>
+    function redireccionar(url) {
+        window.location.href = url; 
+    }
+    function crearNuevaPublicacion(postId) {
+  window.location.href = `/nueva-publicacion?selectedPostId=${postId}`;
+}
+</script>
+</main>

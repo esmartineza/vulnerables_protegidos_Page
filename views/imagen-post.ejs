@@ -1,0 +1,32 @@
+<main class="contenedor">
+
+    <div class="tarjeta">
+  
+      <h2 class="tarjeta-titulo">Cambiar Imagen</h2>
+      <div class="tarjeta-contenido">
+        <form  method="POST" enctype="multipart/form-data">
+      </div>
+        <div>
+            <label class="tarjeta-subtitulo">Imagen Actual</label>
+        </div>
+        <br>
+        <div> 
+            <img src="/uploads/post/<%= post.imagen %>" width="400">
+        </div>
+        <br>
+        <div>
+            <label class="tarjeta-subtitulo">Seleccione una Imagen</label>
+        </div>
+          <div class="file has-name">
+            <div class="file has-name">
+              <span class="file-cta">
+                <input type="file" name="imagen">
+              </span>
+          </div>
+          </div>
+          <br>
+          <button class="button is-success">Cambiar Imagen</button>
+        </form>
+      </div>
+    </div>
+  </main>

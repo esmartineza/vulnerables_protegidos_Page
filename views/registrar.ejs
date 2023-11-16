@@ -1,0 +1,27 @@
+<main class="contenedor contenedor-formulario">
+
+    <div class="container">
+        <h1> <%- nombrePagina %>  </h1>
+        <form action="/registrar" method="POST">
+            <div class="form-group">
+                <label for="nombre">Correo Electronico:</label>
+                <input type="email" id="email"name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="repetir-contrasena">Repetir Contraseña:</label>
+                <input type="password" name="repetir" required>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</main>
+
+

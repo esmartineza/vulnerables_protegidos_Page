@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        /* Agregamos estilos para los botones */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Card</h2>
+
+    <div class="card">
+        <img src="/Blog/public/img/logoWeb.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+        </div>
+        
+        <!-- Agregamos los botones dentro de la tarjeta -->
+        <div class="button-container">
+            <button class="button" onclick="editar()">Editar</button>
+            <button class="button" onclick="verImagen()">Ver Imagen</button>
+            <button class="button" onclick="eliminar()">Eliminar</button>
+        </div>
+    </div>
+
+    <script>
+        function editar() {
+            // Coloca aquí la lógica para la acción de editar
+        }
+
+        function verImagen() {
+            // Coloca aquí la lógica para la acción de ver la imagen
+        }
+
+        function eliminar() {
+            // Coloca aquí la lógica para la acción de eliminar
+        }
+    </script>
+</body>
+</html>
